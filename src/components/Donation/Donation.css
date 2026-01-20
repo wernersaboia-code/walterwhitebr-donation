@@ -1,0 +1,213 @@
+/* src/components/Donation/Donation.css */
+.donation {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.donation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.donation-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donation-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.donation h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--green-primary);
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.donation-subtitle {
+    color: #888;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+/* Cards de doação */
+.donation-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.donation-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.donation-card:hover {
+    border-color: var(--green-primary);
+    box-shadow: 0 0 30px rgba(0, 217, 86, 0.2);
+}
+
+.donation-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.donation-card > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* QR Code */
+.qr-code {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 0 30px rgba(0, 217, 86, 0.3);
+}
+
+.qr-code img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+/* Botão PayPal */
+.paypal-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0070ba;
+    color: #fff;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.paypal-button:hover {
+    background: #005ea6;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 112, 186, 0.4);
+}
+
+.paypal-logo {
+    width: 24px;
+    height: 24px;
+}
+
+/* Link copy */
+.link-copy {
+    display: flex;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.link-copy input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #111;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.link-copy button {
+    padding: 12px 20px;
+    background: var(--green-primary);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.link-copy button:hover {
+    background: var(--green-glow);
+}
+
+/* Valores sugeridos */
+.suggested-amounts {
+    margin-bottom: 40px;
+}
+
+.suggested-amounts > p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.amounts {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.amount-btn {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid var(--green-primary);
+    color: var(--green-primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.amount-btn:hover {
+    background: var(--green-primary);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Agradecimento */
+.thank-you p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.thank-you .small {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .donation-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .donation h2 {
+        font-size: 2rem;
+    }
+
+    .link-copy {
+        flex-direction: column;
+    }
+}

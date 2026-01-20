@@ -1,0 +1,175 @@
+/* src/components/Story/Story.css */
+.story {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.story.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.story h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--green-primary);
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+.story-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    border-left: 4px solid var(--green-primary);
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: var(--green-primary);
+    font-weight: bold;
+}
+
+.location {
+    color: #fff;
+    background: rgba(0, 217, 86, 0.2);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.joke {
+    color: #888;
+    font-style: italic;
+}
+
+/* Título dos locais */
+.locations-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Cards de imagens */
+.story-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.image-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 217, 86, 0.2);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-card:hover .image-wrapper img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 20px 15px 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay p {
+    color: #ccc;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.image-card h4 {
+    color: var(--green-primary);
+    padding: 15px;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .story-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .story-images {
+        grid-template-columns: 1fr;
+    }
+
+    .story h2 {
+        font-size: 2rem;
+    }
+
+    .story-content {
+        padding: 25px;
+    }
+
+    .image-wrapper {
+        height: 200px;
+    }
+}

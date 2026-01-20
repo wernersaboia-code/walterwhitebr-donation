@@ -1,0 +1,124 @@
+/* src/components/Footer/Footer.css */
+.footer {
+    padding: 60px 20px;
+    background: #050505;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.element-small {
+    background: var(--green-primary);
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+}
+
+.footer-quote {
+    font-size: 1.2rem;
+    color: var(--green-primary);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.footer-credits {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.theme-toggle {
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #888;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.theme-toggle:hover {
+    border-color: var(--green-primary);
+    color: var(--green-primary);
+}
+
+/* Konami Code Section */
+.konami-hint {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px dashed #333;
+}
+
+.konami-hint > p:first-child {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.konami-code {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.konami-code span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--green-primary);
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow:
+            0 2px 0 #000,
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.konami-code span:hover {
+    transform: translateY(-2px);
+    border-color: var(--green-primary);
+    box-shadow:
+            0 4px 0 #000,
+            0 0 15px rgba(0, 217, 86, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.konami-instruction {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .konami-code span {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .konami-code {
+        gap: 5px;
+    }
+}
