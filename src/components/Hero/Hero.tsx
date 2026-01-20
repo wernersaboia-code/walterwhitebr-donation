@@ -1,11 +1,10 @@
-// src/components/Hero/Hero.jsx
+// src/components/Hero/Hero.tsx
 import { useState, useEffect } from 'react'
 import './Hero.css'
 
 function Hero() {
     const [text, setText] = useState('')
     const [showLogo, setShowLogo] = useState(false)
-    const [smokeActive, setSmokeActive] = useState(true)
 
     const fullText = "I am the one who knocks..."
 
@@ -42,14 +41,26 @@ function Hero() {
             {/* Overlay escuro */}
             <div className="hero-overlay"></div>
 
-            {/* Fumaça verde */}
-            {smokeActive && (
-                <div className="smoke-container">
-                    <div className="smoke smoke-1"></div>
-                    <div className="smoke smoke-2"></div>
-                    <div className="smoke smoke-3"></div>
-                </div>
-            )}
+            {/* Fumaça verde realista */}
+            <div className="smoke-container">
+                {/* Névoa base */}
+                <div className="smoke-base"></div>
+
+                {/* Fumaças principais subindo */}
+                <div className="smoke smoke-1"></div>
+                <div className="smoke smoke-2"></div>
+                <div className="smoke smoke-3"></div>
+                <div className="smoke smoke-4"></div>
+                <div className="smoke smoke-5"></div>
+
+                {/* Partículas menores */}
+                <div className="smoke-particle"></div>
+                <div className="smoke-particle"></div>
+                <div className="smoke-particle"></div>
+                <div className="smoke-particle"></div>
+                <div className="smoke-particle"></div>
+                <div className="smoke-particle"></div>
+            </div>
 
             {/* Conteúdo */}
             <div className="hero-content">
