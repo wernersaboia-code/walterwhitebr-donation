@@ -1,10 +1,10 @@
 /* src/components/Donation/Donation.css */
 .donation {
     padding: 100px 20px;
-    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 50%, var(--bg-gradient-start) 100%);
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1s ease;
+    transition: all 1s ease, background 0.3s ease;
 }
 
 .donation.visible {
@@ -38,7 +38,7 @@
 }
 
 .donation-subtitle {
-    color: #888;
+    color: var(--text-muted);
     font-size: 1.2rem;
     margin-bottom: 50px;
 }
@@ -52,7 +52,7 @@
 }
 
 .donation-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 40px 30px;
     transition: all 0.3s ease;
@@ -67,11 +67,11 @@
 .donation-card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .donation-card > p {
-    color: #666;
+    color: var(--text-dark);
     margin-bottom: 25px;
 }
 
@@ -128,10 +128,10 @@
 .link-copy input {
     flex: 1;
     padding: 12px 15px;
-    border: 1px solid #333;
+    border: 1px solid var(--border-subtle);
     border-radius: 10px;
-    background: #111;
-    color: #888;
+    background: var(--input-bg);
+    color: var(--text-muted);
     font-size: 0.85rem;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .suggested-amounts > p {
-    color: #666;
+    color: var(--text-dark);
     margin-bottom: 15px;
 }
 
@@ -187,13 +187,13 @@
 
 /* Agradecimento */
 .thank-you p {
-    color: #888;
+    color: var(--text-muted);
     font-size: 1.1rem;
 }
 
 .thank-you .small {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-dark);
     font-style: italic;
     margin-top: 10px;
 }

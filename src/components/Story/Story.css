@@ -1,10 +1,10 @@
 /* src/components/Story/Story.css */
 .story {
     padding: 100px 20px;
-    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1s ease;
+    transition: all 1s ease, background 0.3s ease;
 }
 
 .story.visible {
@@ -38,18 +38,19 @@
 }
 
 .story-content {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 40px;
     border-left: 4px solid var(--green-primary);
     text-align: left;
     margin-bottom: 50px;
+    transition: background 0.3s ease;
 }
 
 .story-content p {
     font-size: 1.1rem;
     line-height: 2;
-    color: #ccc;
+    color: var(--text-secondary);
     margin-bottom: 20px;
 }
 
@@ -63,14 +64,14 @@
 }
 
 .location {
-    color: #fff;
+    color: var(--text-primary);
     background: rgba(0, 217, 86, 0.2);
     padding: 2px 8px;
     border-radius: 5px;
 }
 
 .joke {
-    color: #888;
+    color: var(--text-muted);
     font-style: italic;
 }
 
@@ -78,7 +79,7 @@
 .locations-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 30px;
     letter-spacing: 2px;
 }
@@ -91,7 +92,7 @@
 }
 
 .image-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -147,6 +148,7 @@
     padding: 15px;
     font-size: 1rem;
     margin: 0;
+    background: var(--card-bg);
 }
 
 /* Responsivo */

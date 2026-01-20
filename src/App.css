@@ -8,24 +8,51 @@
 }
 
 :root {
+  /* Cores principais */
   --green-primary: #00d956;
   --green-glow: #00ff6a;
-  --dark-bg: #0a0a0a;
-  --dark-secondary: #1a1a2e;
-  --dark-tertiary: #16213e;
+
+  /* Dark theme (padrão) */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --bg-gradient-start: #0a0a0a;
+  --bg-gradient-end: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+  --text-dark: #666666;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-bg-hover: rgba(0, 217, 86, 0.1);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-subtle: #333333;
+  --input-bg: #111111;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Light theme */
+.app.light {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8e8e8;
+  --bg-gradient-start: #f5f5f5;
+  --bg-gradient-end: #e0e0e0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --text-dark: #888888;
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --card-bg-hover: rgba(0, 217, 86, 0.15);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-subtle: #cccccc;
+  --input-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .app {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-}
-
-.app.dark {
-  background: var(--dark-bg);
-  color: #fff;
-}
-
-.app.light {
-  background: #f5f5f5;
-  color: #1a1a1a;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
 }
