@@ -6,25 +6,25 @@ const locations = [
     {
         id: 1,
         name: "Casa do Walter",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Breaking_Bad_House.jpg",
+        image: "/images/casa-walter.jpg",
         description: "A icônica casa da família White"
     },
     {
         id: 2,
         name: "Los Pollos Hermanos",
-        image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Twisters_Albuquerque.jpg",
+        image: "/images/los-pollos.jpg",
         description: "O restaurante do Gus Fring"
     },
     {
         id: 3,
         name: "A1A Car Wash",
-        image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mister_Car_Wash_Albuquerque.jpg",
+        image: "/images/car-wash.jpg",
         description: "O lava-jato da família White"
     },
     {
         id: 4,
         name: "Deserto do Novo México",
-        image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800",
+        image: "/images/deserto.jpg",
         description: "Onde a magia acontecia"
     }
 ]
